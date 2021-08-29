@@ -1,0 +1,23 @@
+dna_dataframe.xlsx  table containing all DNA inserts identified in the all samples, respective frequencies in each sample, including the frequency in each sample and BlastN results against reference genomes.
+dna_above_cutoff.xlsx   same as dna_dataframe.xlsx, but containing only the inserts that are above the BlastN identity cutoff (match reference genomes)
+dna_below_cutoff.xlsx   same as dna_dataframe.xlsx, but containing only the inserts that are below the BlastN identity cutoff (do not match reference genomes) 
+peptide_dataframe.xlsx  table containing all peptides identified in the all samples peptide, including the frequency in each sample and BlastP results against reference proteomes.
+norm_peptide_df.xlsx    same as peptide_dataframe.xlsx, but with counts normalized by total DNA (relative frequency)
+peptide_above_cutoff.xlsx   same as peptide_dataframe.xlsx, but containing only the peptides that are above the BlastP similarity cutoff (match reference proteomes)
+peptide_below_cutoff.xlsx   same as peptide_dataframe.xlsx, but containing only the peptides that are below the BlastP similarity cutoff (do not match reference proteomes)
+statistics.xlsx general processing statistics 
+
+Custom variables
+
+BLASTN_EXE  path/command to BlastN executable
+BLASTN_DB   path to BlastN database
+BLASTP_EXE  path/command to BlastP executable
+BLASTP_DB   path to BlastP database
+dict_sample_fastq   Sample names and path to respective FastQ to be processes. To add a sample, add a new line with the following code: dict_sample_fastq["Sample Name"] = "path_to_fastq.fastq"
+cutoff_dna_identity Minimum relative identity to reference genome for a DNA insert to be considered a hit (default is 0.9)
+cutoff_peptide_similarity Minimum relative similarity to reference proteome for a peptide to be considered a hit (default is 0.6)
+flank_upstream  sequence found upstream of the DNA insert (default set for pG8SAET sequence)
+flank_downstream    sequence found downstream of the DNA insert (default set for pG8SAET sequence)
+
+
+            
